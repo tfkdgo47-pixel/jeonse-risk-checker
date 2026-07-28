@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+html {
+  font-size: 18px;
+}
+
+:root {
+  --background: #faf8f3;
+  --foreground: #16233d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* 브랜드 팔레트: 네이비(자산을 지킨다는 신뢰감) + 골드 포인트 — 관리비 앱의 밝은 파란 톤과 구분 */
+  --color-brand-50: #eef1f6;
+  --color-brand-100: #d9e0eb;
+  --color-brand-200: #b3c1d6;
+  --color-brand-300: #8199bd;
+  --color-brand-400: #56709e;
+  --color-brand-500: #375080;
+  --color-brand-600: #253b64;
+  --color-brand-700: #1a2c4d;
+  --color-brand-800: #14213c;
+  --color-brand-900: #0d1728;
+
+  --color-gold-400: #f0cf7a;
+  --color-gold-500: #e0b84a;
+  --color-gold-600: #c79a2e;
+
+  /* 슬레이트 톤(본문/텍스트, 네이비 기미) */
+  --color-slate-50: #f5f6f8;
+  --color-slate-100: #e7eaef;
+  --color-slate-300: #aab2c0;
+  --color-slate-500: #67718a;
+  --color-slate-700: #3a4359;
+  --color-slate-900: #16233d;
+
+  --font-display: var(--font-noto-kr);
+  --font-body: var(--font-noto-kr);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% -10%, #f4e3ae 0%, transparent 45%),
+    radial-gradient(circle at 100% 0%, #d3dbea 0%, transparent 40%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+}
