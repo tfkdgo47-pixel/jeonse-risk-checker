@@ -1,6 +1,12 @@
 import Link from "next/link";
 import JeonseRiskForm from "@/components/calculators/jeonseRisk/JeonseRiskForm";
 
+// 같은 ourcalctools.com 패밀리의 다른 사이트들.
+const FAMILY_SITES = [
+  { href: "https://ourcalctools.com", label: "아기 개월수 계산기" },
+  { href: "https://fortune.ourcalctools.com", label: "오늘의 나" },
+];
+
 export default function Home() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
@@ -26,6 +32,21 @@ export default function Home() {
 
       <section className="mt-10">
         <JeonseRiskForm />
+      </section>
+
+      <section className="mt-12 border-t border-slate-100 pt-6 text-center">
+        <p className="text-sm text-slate-500">이런 계산기도 있어요</p>
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
+          {FAMILY_SITES.map((site) => (
+            <a
+              key={site.href}
+              href={site.href}
+              className="font-bold text-brand-600 hover:underline"
+            >
+              {site.label}
+            </a>
+          ))}
+        </div>
       </section>
     </div>
   );
